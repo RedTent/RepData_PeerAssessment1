@@ -82,6 +82,8 @@ The 5-minute interval at **08:35:00** contains the maximum number of steps.
 
 ## Imputing missing values
 
+The strategy that I have chosen to impute missing data is to replace the missing values with the average value of the same interval of all days.
+
 
 ```r
 n_missing <- sum(!complete.cases(steps))
@@ -105,6 +107,8 @@ mean_daily_steps_imp <- mean(steps_by_day_imp$daily_steps) %>% round() %>% forma
 median_daily_steps_imp <- median(steps_by_day_imp$daily_steps) %>% round() %>% format(scientific = FALSE)
 ```
 The number of missing values is **2304**.
+
+
 
 When missing data are imputed with the average for the concerning time interval, the mean total number steps taken per day is **10766**.
 

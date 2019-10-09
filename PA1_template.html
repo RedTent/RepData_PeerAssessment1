@@ -416,6 +416,7 @@ steps_interval %&gt;%
 </div>
 <div id="imputing-missing-values" class="section level2">
 <h2>Imputing missing values</h2>
+<p>The strategy that I have chosen to impute missing data is to replace the missing values with the average value of the same interval of all days.</p>
 <pre class="r"><code>n_missing &lt;- sum(!complete.cases(steps))
 
 steps_imputed &lt;- steps %&gt;% 
